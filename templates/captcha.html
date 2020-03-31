@@ -1,0 +1,86 @@
+## -*- coding: utf-8 -*-
+
+<%inherit file="base.html"/>
+<%page args="hey=''"/>
+
+<div class="container-narrow" id="captcha-submission-container">
+  <div class="container-fluid container-fluid-inner-5">
+    <div class="box" id="captcha-box">
+      <img alt="Your browser is not displaying images properly" src="https://www.mysecondmillion.com/wp-content/uploads/2013/07/shorts1.png" />
+
+      <form class="bs-component"
+            id="captchaSubmission"
+            action=""
+            method="POST">
+        <fieldset>
+          <div class="form-group">
+            <div class="input-group" id="captcha-submission-group">
+              <input type="hidden"
+                     form="captchaSubmission"
+                     name="captcha_challenge_field"
+                     id="captcha_challenge_field"
+                     value=""></input>
+              <input class="form-control"
+                     form="captchaSubmission"
+                     name="captcha_response_field"
+                     id="captcha_response_field"
+                     value=""
+                     autocomplete="off"
+                     type="text"
+                     placeholder="Enter the characters from the image above..."
+                     accesskey="t" autofocus ></input>
+              <span class="input-group-btn">
+                <button class="btn btn-primary"
+                        form="captchaSubmission"
+                        type="submit"
+                        name="submit"
+                        id="captcha-submit-button"
+                        value="submit"
+                        accesskey="s">
+                  <i class="icon-level-down icon-rotate-90"></i>
+                </button>
+              </span>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <div class="box" id="captcha-box">
+	<audio controls id="audio-captcha">
+		<source src="assets/out.wav" type="audio/wav">
+		Your browser does not support the audio element.
+	</audio>
+	<form class="bs-component"
+	      id="audioCaptchaSubmission"
+	      action=""
+	      method="POST">
+		<fieldset>
+			<div class="form-group">
+				<div class="input-group" id="captcha-submission-group">
+					<input class="form-control"
+					       form="audioCaptchaSubmission"
+					       name="audioguess"
+					       id="captcha_response_field"
+					       value=""
+					       autocomplete="off"
+					       type="text"
+					       placeholder="Enter the characters from the audio above..."
+					       accesskey="r"></input>
+					<span class="input-group-btn">
+						<button class="btn btn-primary"
+							form="audioCaptchaSubmission"
+							type="submit"
+							name="submit"
+							id="captcha-submit-button"
+							value="submit"
+							accesskey="y">
+							<i class="icon-level-down icon-rotate-90"></i>
+						</button>
+					</span>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+    </div>
+  </div>
+</div>

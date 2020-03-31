@@ -1,0 +1,64 @@
+## -*- coding: utf-8 -*-
+
+<%namespace name="base" file="base.html" inheritable="True"/>
+<%page args="hey=''"/>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>BridgeDB</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tor Bridges">
+    <meta name="author" content="The Tor Project">
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
+
+<body>
+  <div class="background-1">
+    <div class="background-2">
+
+      <div class="container-narrow">
+        <div class="masthead">
+          <div class="nav nav-tabs">
+            <div class="nav navbar-header">
+              <a  class="navbar-brand" href="#">BridgeDB</a>
+            </div>
+            <ul class="nav navbar-nav pull-right">
+              <li>
+                <a href="https://www.torproject.org">The Tor Project</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+${next.body(hey)}
+
+
+        <div class="footer footer-small">
+        <hr>
+  <p>
+    <a href="https://trac.torproject.org/projects/tor/newticket?component=Circumvention/BridgeDB&keywords=bridgedb-reportbug">
+      <i class="icon icon-large icon-bug"><span id="footer-bugs">&nbsp;Report a Bug</span></i></a>
+    &nbsp; &middot; &nbsp;
+    <a href="https://gitweb.torproject.org/bridgedb.git">
+      <i class="icon icon-large icon-code"><span id="footer-code">&nbsp;Source Code</span></i></a>
+    &nbsp; &middot; &nbsp;
+    <a href="https://gitweb.torproject.org/bridgedb.git/tree/CHANGELOG">
+      <i class="icon icon-large icon-rocket"><span id="footer-changelog">&nbsp;Changelog</span></i></a>
+    &nbsp; &middot; &nbsp;
+    <a href="../keys"><i class="icon icon-large icon-key"><span id="footer-keys">&nbsp;Public Keys</span></i></a>
+  </p>
+  <br />
+  <p>&copy; The Tor Project</p>
+
+        </div> <!-- end footer -->
+      </div> <!-- /container -->
+    </div>
+  </div>
+</body>
+</html>
